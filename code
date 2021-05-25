@@ -23,31 +23,26 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.") 
 
-usr_choice1 = input('Which direction you choose Left or Right? ')
+usr_choice1 = input('Which direction you choose Left or Right? ').lower()
 
-lower_usr_choice1 = usr_choice1.lower()
-
-
-if lower_usr_choice1 == 'right':
+if usr_choice1 == 'right':
     print('Fall into a hole. Game over.') 
 
-elif lower_usr_choice1 == 'left':
-    usr_choice2 = input('You got to the shore, do you want to swim or continue walking? Swim or Continue ')
-    lower_usr_choice2 = usr_choice2.lower()
-    if lower_usr_choice2 == 'continue':
-        usr_choice3 = input('You found a house with multiple doors each of different color, which color do you choose? Red, Blue, Yellow ')
-        lower_usr_choice3 = usr_choice3.lower()
-        if lower_usr_choice3 == 'red':
+elif usr_choice1 == 'left':
+    usr_choice2 = input('You got to the shore, do you want to swim or continue walking? Swim or Continue ').lower()
+    if usr_choice2 == 'continue':
+        usr_choice3 = input('You found a house with multiple doors each of different color, which color do you choose? Red, Blue, Yellow ').lower()
+        if usr_choice3 == 'red':
             print('You go burned by fire, Game over')
-        elif lower_usr_choice3 == 'yellow':
+        elif usr_choice3 == 'yellow':
             print('You win! ')
-        elif lower_usr_choice3 == 'blue':
+        elif usr_choice3 == 'blue':
             print('Eaten by beasts. Game over.')
         else:
             print('Game over') 
-    elif lower_usr_choice2 == 'swim':
+    elif usr_choice2 == 'swim':
         print('You got attacked by a trout. Game over')
     else:
-        print('Game over')
+        print('Please select a valid word, Game over')
 else:
-    print('Game over')
+    print('Please select a valid word, Game over')
